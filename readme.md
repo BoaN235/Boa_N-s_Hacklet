@@ -1,4 +1,4 @@
-### list of bookmarklets
+## list of bookmarklets
 
 ### Dark Mode
 
