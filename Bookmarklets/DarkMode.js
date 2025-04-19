@@ -1,6 +1,12 @@
-function flipmode() {
-    const body = document.body;
-    const currentTheme = body.style.backgroundColor === 'black' ? 'light' : 'dark';
-    body.style.backgroundColor = currentTheme === 'dark' ? 'black' : 'white';
-    body.style.color = currentTheme === 'dark' ? 'white' : 'black';
+function darkmode() {
+    function applyDarkMode(element) {
+        if (element.style) {
+            element.style.backgroundColor = 'black';
+            element.style.color = 'white';
+        }
+        for (let child of element.children) {
+            applyDarkMode(child);
+        }
+    }
+    applyDarkMode(document.body);
 }

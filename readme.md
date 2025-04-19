@@ -2,6 +2,4 @@
 
 ### Dark Mode
 
-`
-javascript:(function(){const body=document.body;const currentTheme=body.style.backgroundColor==='black'?'light':'dark';body.style.backgroundColor=currentTheme==='dark'?'black':'white';body.style.color=currentTheme==='dark'?'white':'black';})();
-`
+`javascript:(function(){function d(e){if(e.style){e.style.backgroundColor='black';e.style.color='white';}for(let c of e.children){d(c);}}d(document.body);})();`
