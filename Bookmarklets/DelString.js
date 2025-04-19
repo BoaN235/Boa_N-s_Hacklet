@@ -1,20 +1,20 @@
-function deleteLetter() {
-    const letterToDelete = prompt("Enter the letter you want to delete: ");
+function deleteString() {
+    const StringToDelete = prompt("Enter the string you want to delete: ");
     
     // Function to delete the letter from text content of elements
-    function delLetterFromElement(element) {
+    function delStringFromElement(element) {
         // Only modify text nodes (ignores style or non-text elements)
         if (element.nodeType === Node.TEXT_NODE) {
-            const regex = new RegExp(letterToDelete, 'gi');
+            const regex = new RegExp(StringToDelete, 'gi');
             element.textContent = element.textContent.replace(regex, '');
         }
         
         // Recursively process child nodes
         for (const child of element.childNodes) {
-            delLetterFromElement(child);
+            delStringFromElement(child);
         }
     }
 
     // Start the deletion from the body element
-    delLetterFromElement(document.body);
+    delStringFromElement(document.body);
 }
