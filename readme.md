@@ -21,3 +21,8 @@ This removes a string from the page.
 This replaces a string on the page
 
 `javascript:(function(){function deleteString(){const StringToDelete=prompt("Enter the string you want to replace: ");const StringToReplace=prompt("Enter the string you want to replace it with: ");function delStringFromElement(e){if(e.nodeType===Node.TEXT_NODE){const r=new RegExp(StringToDelete,"gi");e.textContent=e.textContent.replace(r,StringToReplace)}for(const t of e.childNodes)delStringFromElement(t)}delStringFromElement(document.body)}deleteString();})();`
+
+## Games
+
+### Tic Tac Toe
+
